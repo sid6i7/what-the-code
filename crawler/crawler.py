@@ -8,7 +8,7 @@ import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 
 from crawler.helpers import extract_domain, random_delay
-from config import STATE_DIR
+from config import CRAWLER_STATE_DIR
 
 class Crawler:
     def __init__(self, start_url, web_graph, max_depth, db, batch_size=10, state_file='crawler_state.json'):
@@ -32,7 +32,7 @@ class Crawler:
         self.n_pages_crawled = 0
         self.urls_to_crawl = deque()
         self.visited_urls = set() 
-        self.state_file = os.path.join(STATE_DIR, state_file)
+        self.state_file = os.path.join(CRAWLER_STATE_DIR, state_file)
         self.seen_urls = {}
 
         self.driver = None

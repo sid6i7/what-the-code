@@ -1,10 +1,10 @@
 import os
 
-from config import STATE_DIR
+from config import CRAWLER_STATE_DIR
 
 
-if not os.path.exists(STATE_DIR):
-    os.makedirs(STATE_DIR)
+if not os.path.exists(CRAWLER_STATE_DIR):
+    os.makedirs(CRAWLER_STATE_DIR)
 
 # crawler/__init__.py
 
